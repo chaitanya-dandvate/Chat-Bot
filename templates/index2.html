@@ -1,0 +1,29 @@
+
+<!doctype html>
+    <title>Ask Anything</title>
+    <h1>Chat Application</h1>
+
+    <a href="http://127.0.0.1:5000/chat"><input type="button" value="Refresh Chat"></a>
+
+    <div style="height: 500px; background: lightblue; margin-left: 300px; width: 400px;">
+
+    <form action="http://127.0.0.1:5000/chat_data" method=post enctype=multipart/form-data>
+        <div style="">
+            <input style="width: 332px; height: 20px;" type="text" name="que">
+            <input style="height: 26px;" type="submit" name="button" value="Submit">
+        </div>
+
+        <div style="height: 474px;">
+            {% if flag %}
+            {% for i in range(l) %}
+            <p style="text-align: right; padding-right: 10px;">{{user_side[i]}}</p>
+            <p style="padding-left: 10px;">{{bot_side[i]}}</p>
+            {% endfor %}
+            {% endif %}
+        </div>
+    </form>
+
+    </div>
+
+   </body>
+</html>

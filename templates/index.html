@@ -1,0 +1,25 @@
+
+   
+<!doctype html>
+    <title>Ask Anything</title>
+    <h1>Ask Anything</h1>
+    <form action="http://127.0.0.1:5000/chat_data" method=post enctype=multipart/form-data>
+    	Question : <input style="width: 300px;" type="text" name="que" value="{{que}}">    <input type=submit value="Submit"><br><br>
+    	{% if flag %}
+
+        Answer : {{ans}} <br><br><br>
+        
+        Intent : {{intent}} <br><br>
+
+    	{% for key, value in extracted.items() %}
+
+			{{key}} :   {{value}} <br><br>
+
+		{% endfor %}
+
+		{% endif %}
+
+    </form>
+      
+   </body>
+</html>
